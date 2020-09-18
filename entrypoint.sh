@@ -7,7 +7,7 @@ echo "==================="
 set
 echo "==================="
 
-VERSION=$1
+VERSION=$INPUT_VERSION
 TARBALL="v$VERSION.tgz"
 
 bosh create-release --final --version "$VERSION" --tarball "$TARBALL"
