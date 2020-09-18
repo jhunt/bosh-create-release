@@ -11,4 +11,4 @@ VERSION=$INPUT_VERSION
 TARBALL="v$VERSION.tgz"
 
 bosh create-release --final --version "$VERSION" --tarball "$TARBALL"
-echo "::set-output tarball=$PWD/$TARBALL"
+echo "::set-output name=tarball::$PWD/$TARBALL"
