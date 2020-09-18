@@ -12,10 +12,10 @@ inputs:
     required: false
     default: bosh-release.tgz
 
-  s3-access-key-id:
+  s3_access_key_id:
     required: true
     description: The AWS S3 Access Key ID for blobstore access
-  s3-secret-access-key:
+  s3_secret_access_key:
     required: true
     description: The AWS S3 Secret Access Key for blobstore access
 
