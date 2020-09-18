@@ -1,6 +1,12 @@
 #!/bin/sh
 set -eu
 
+echo "==================="
+env
+echo "==================="
+set
+echo "==================="
+
 VERSION=$1
 TARBALL="v$VERSION.tgz"
 
