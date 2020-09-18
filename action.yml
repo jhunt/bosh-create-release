@@ -1,6 +1,9 @@
 name: 'BOSH Create Release'
 description: Create a BOSH release tarball from a checked out repository'
 inputs:
+  name:
+    description: What do you want to call your BOSH release?
+    required: true
   version:
     description: What version to give the new BOSH release asset
     required: true
@@ -8,6 +11,13 @@ inputs:
     description: Where should the final release tarball be written?
     required: false
     default: bosh-release.tgz
+
+  s3-access-key-id:
+    required: true
+    description: The AWS S3 Access Key ID for blobstore access
+  s3-secret-access-key:
+    required: true
+    description: The AWS S3 Secret Access Key for blobstore access
 
 runs:
   using: docker
