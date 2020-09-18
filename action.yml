@@ -4,9 +4,10 @@ inputs:
   version:
     description: What version to give the new BOSH release asset
     required: true
-outputs:
   tarball:
-    description: The path of the output tarball asset
+    description: Where should the final release tarball be written?
+    required: false
+    default: bosh-release.tgz
 
 runs:
   using: docker
