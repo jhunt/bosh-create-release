@@ -6,7 +6,8 @@ inputs:
     required: true
   version:
     description: What version to give the new BOSH release asset
-    required: true
+    required: false
+    default:  ''
   tarball:
     description: Where should the final release tarball be written?
     required: false
