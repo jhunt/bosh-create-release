@@ -1,12 +1,8 @@
 #!/bin/sh
+set -eu
 
-echo "==[ env ]=================="
-env
+VERSION=$1
+TARBALL="v$VERSION.tgz"
 
-echo ; echo
-cd $GITHUB_WORKSPACE
-echo "==[ ls -lR ]==============="
-ls -lR
-
-echo ; echo
-echo "==========================="
+bosh create-release --final --version "$VERSION" --tarball "$TARBALL"
+echo "::set-output tarball=$PWD/$TARBALL"
