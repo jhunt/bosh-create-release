@@ -3,6 +3,8 @@ set -eu
 VERSION=${INPUT_VERSION:-}
 TARBALL=${INPUT_TARBALL:-bosh-release.tgz}
 
+git config --global --add safe.directory $PWD
+
 if [ "x${VERSION:-}" = "x" ]; then
   bosh -n --no-color create-release --timestamp-version --force --tarball "$TARBALL"
   exit 0
